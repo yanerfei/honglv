@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 2. 引入less样式文件 -->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <!-- 3.引入less.js文件 -->
+    <script src="./lib/less/less.js"></script>
+    <title>红旅动漫</title>
+</head>
+<body>
+<div id="layout">
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="top clearfix">
+            <a href="#" class="select pull-left">
+                <i class="iconfont icon-gengduo"></i>
+            </a>
+            <span class="title">红旅动漫</span>
+            <a href="#" class="searchBtn pull-right"><i class="iconfont icon-sousuo"></i></a>
+        </div>
+        <div class="top-menu" hidden>
+            <a href="javascript:;" class="logo"><img src="./img/logo.jpg" alt=""></a>
+            <ul>
+                <li class="bb"><a href="./category/lianzai.html"><span>连载动漫</span><i class="iconfont icon-jiantou1"></i></a></li>
+                <li class=""><a href="./category/zhuanti.html"><span>专题列表</span><i class="iconfont icon-jiantou1"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 轮播图区域 -->
+    <section id="slide"  class="swiper-container">
+        <div class="swiper-wrapper">
+         
+        </div>
+        <!-- 小圆点 就是ol -->
+        <div class="swiper-pagination"></div>
+    </section>
+    <!-- tab栏切换 -->
+    <section id="tab">
+        <div class="title">
+            <ul class="clearfix">
+                <li class="active"><a href="javascript:;"><span>新增连载</span></a></li>
+                <li><a href="javascript:;"><span>新增完结</span></a></li>
+                <li><a href="javascript:;"><span>推荐连载</span></a></li>
+                <li><a href="javascript:;"><span>推荐完结</span></a></li>               
+            </ul>
+        </div>
+        <div class="tab-body">
+            <ul class="clearfix">
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="./lib/jquery/jquery-1.12.4.js"></script>
+<script src="./lib/swiper/js/swiper.min.js"></script>
+<script src="./lib/jquery/template-web.js"></script>
+<script src="./js/index.js"></script>
+<script type="text/html" id="lunbo">
+{{each}}
+    <div class="swiper-slide">
+        <a href="{{$value.url}}">
+            <img src="{{$value.img}}" alt="">
+        </a>
+        <div class="desc">
+            <span>{{$value.title}}</span>           
+        </div>
+    </div>
+{{/each}}
+</script>
+<script type="text/html" id="nav-body">
+{{each}}
+    <li>
+        <div class="tab-img">
+            <a href="{{$value.url}}"><img src="{{$value.img}}" alt="">
+            <p>{{$value.update}}</p>
+            </a>
+        </div>
+        <p class="title">{{$value.name}}</p>
+    </li>
+
+{{/each}}
+</script>
+<script>
+
+</script>
+</body>
+</html>

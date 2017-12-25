@@ -1,0 +1,54 @@
+@import "base.less";
+
+#layout {
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+#header {
+    height: 34px;
+    padding: 0 10px;
+    line-height: 34px;
+    background-color: #ccc;
+    position: relative;
+    > a {
+        height: 34px;
+        width: 34px;
+        line-height: 34px;
+        position: absolute;
+        text-align: left;
+        display: block;
+        > i {
+            color: @main-color;
+            font-size: 18px;
+        }
+    }
+    h3 {
+        font-size: 14px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #000;
+    }
+}
+#list {
+    padding: 0px 10px;
+    > ul {
+        li {
+            padding: 10px 0px;
+            border-bottom: 1px solid #ccc;
+            > a {
+                display: block;
+                > img {
+                    width: 100%;
+                }
+                p {
+                    font-size: 12px;
+                    color: #666;
+                    margin-top: 6px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
